@@ -1,0 +1,349 @@
+:root {
+  /* Default Theme */
+  --header-background: #119822; /* Forest Green */
+  --header-font-color: #e6d9f0; /* Light Orange */
+
+  --footer-background: #001f1c; /* Even Darker Greenish Gray */
+  --footer-font-color: #e6d9f0; /* Light Grayish Purple */
+
+  --primary-background: #2a52be; 
+  --primary-font-color: #e6d9f0; /* Lime Green */
+
+  --secondary-background: #008080; 
+  --secondary-font-color: #e6d9f0; /* Forest Green */
+
+  /* Fonts */
+  --heading-font: "Lora", sans-serif; /* Bold for headings */
+  --body-font: "Lato", sans-serif; /* Regular for body text */
+  --cta-font: "Montserrat", sans-serif; /* Bold for call to actions */
+
+  /* Additional Tips */
+  --shadow-color: #aaaaaa; /* Subtle shadow color */
+  --gradient-start: #b2ffb8; /* Light orange for gradient start */
+  --gradient-end: #31cb00; /* Lime green for gradient end */
+  --padding-base: 10px; /* Base padding for elements */
+  --margin-base: 15px; /* Base margin for elements */
+
+  /* DEBUGGIN VARIABLES */
+  --test-color-alpha: #ff0077;
+  --test-color-beta: #f2e5cc;
+  --test-color-omega: #002fff;
+}
+
+body,.main-container,header,footer{
+  box-sizing: border-box;
+  padding: 0 0;
+  margin: 0;
+}
+
+body {
+  
+  font-family: var(--body-font);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,footer{
+  font-family: var(--heading-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  width: 100vw;
+  z-index: 999;
+  height: 5%;
+  overflow: hidden;
+
+}
+
+header {
+  background-color: var(--header-background);
+  color: var(--header-font-color);
+  top: 0;
+}
+
+footer {
+  background-color: var(--footer-background);
+  color: var(--footer-font-color);
+  bottom: 0;
+}
+
+.main-container {
+  display: flex;
+  overflow: hidden;
+  height: 90vh;
+  background-color: var(--test-color-omega);
+  
+}
+
+.secondary-container, .primary-container {
+  box-sizing: border-box;
+  /* top: 5%;
+  bottom: 5%;*/
+  padding: 1%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary-container {
+  flex: 0 0 15%;
+  background-color: var(--secondary-background);
+  font-size: 12px;
+  color: var(--secondary-font-color);
+  position: sticky;
+
+}
+
+.primary-container {
+  background-color: var(--primary-background);
+  font-size: 14px;
+  color: var(--primary-font-color);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  flex: 1;
+  position: sticky;
+
+}
+
+
+
+/* Catch All Selectors */
+
+.primary-container * {
+  background-color: inherit;
+  padding: 2px 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  color: var(--primary-font-color);
+  font-size: 16px;
+}
+
+.secondary-container * {
+  background-color: inherit;
+  padding: 2px 0;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  color: var(--secondary-font-color);
+}
+
+.profile-picture {
+  object-fit: cover;
+  height: 25%;
+  width: 25%;
+  margin: 0 auto;
+  border-radius: 45%;
+}
+
+.primary-content {
+overflow-y: scroll;
+height: 100%;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+.primary-content{
+  padding: 0 0 1px 0;
+}
+
+.secondary-content{
+  padding: 2% 2%;
+}
+/* Contact Information */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--body-font);
+}
+
+.contact-info h2,h1 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: var(--primary-font-color);
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-info li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.contact-info li a {
+  color: var(--primary-font-color);
+  text-decoration: none;
+}
+
+.contact-info li a:hover {
+  text-decoration: underline;
+}
+
+/* Resume Section and Entry */
+.resume-section {
+  background-color: var(--test-color-alpha);
+  border-bottom: 2px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2px 10px;
+  margin-bottom: 1%;
+}
+.resume-section .resume-entry > ul > li {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+.resume-section .resume-entry {
+  background-color: var(--test-color-omega);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.resume-section .resume-entry > h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.resume-section .resume-entry .resume-entry-time,
+.resume-section .resume-entry .resume-entry-location {
+  display: block;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.resume-section .resume-entry:last-child {
+  border-bottom: none;
+}
+.resume-entry {
+  padding: 0 10px 5px 10px;
+}
+
+#keywords-entry {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bubble {
+  border-radius: 50px;
+  padding: 10px 15px;
+  background-color: var(--test-color-omega);
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.bubble:hover {
+  background-color: var(--test-color-beta);
+  cursor: pointer;
+}
+
+#game-card-entry {
+  display: inline-block;
+  width: 250px;
+  margin: 5px auto;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#game-card-entry h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#game-card-entry p {
+  line-height: 1.5;
+}
+
+#game-card-entry ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#game-card-entry ul li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#game-cgame-card-entryard ul li i {
+  font-size: 16px;
+  color: #ddd;
+}
+
+#game-card-entry a {
+  text-decoration: none;
+  color: #000;
+}
+
+.pie-chart {
+  display: inline-block;
+  width: 150px; /* adjust as needed */
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto; /* optional for centering */
+}
+
+.pie-slice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.pie-slice {
+  clip-path: polygon(50% 50%, 50% 0%, calc(50% + var(--percentage) / 2), calc(20% - var(--percentage) / 2)); /* Dynamically adjusts based on data-percentage */
+}
+
+.pie-slice[data-percentage] {
+  --percentage: attr(data-percentage); /* Sets the CSS variable from element attribute */
+}
+
+.pie-slice {
+  background-color: #eee; /* default color */
+}
+
+.pie-slice[data-color] {
+  background-color: var(--color); /* use data-color attribute */
+}
+
+
+.pie-slice:nth-child(1) {
+  background-color: #007bff; /* blue for first child */
+}
+
+.pie-slice:nth-child(2) {
+  background-color: #f00; /* red for second child */
+}
+
+.pie-slice:nth-child(3) {
+  background-color: #ffc107; /* green for third child */
+}
+
+.pie-slice:nth-child(4) {
+  background-color: #096611; /* yellow for fourth child */
+}
+
+.landing-content{
+  background-color: inherit;
+}
