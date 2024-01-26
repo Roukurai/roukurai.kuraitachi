@@ -25,7 +25,7 @@
         <section>
             <h2>This is test</h2>
             <p>This is test as well</p>
-            <button onclick="redirectToGame()">Test Bakemono Legacy 0.0.1</button>
+            <button onclick="redirectToGame()">Test Bakemono Legacy 0.0.2</button>
         </section>
     </div>
 
@@ -40,7 +40,7 @@
         }
 
         function redirectToGame() {
-            window.location.href='/games/bakemono_legacy/0.0.1/index.html';
+            window.location.href='/games/bakemono_legacy/0.0.2/index.html';
         }
     </script>
 </body>
