@@ -19,13 +19,14 @@
         <section class="landing-content">
             <h2>Welcome to my Landing Page!</h2>
             <p>This is a placeholder for future content. Check back soon for updates!</p>
-            <button onclick="redirectToResume()">View CV</button>
+            <button id="viewCV">View CV</button>
         </section>
 
         <section>
-            <h2>This is test</h2>
-            <p>This is test as well</p>
-            <button onclick="redirectToGame()">Test Bakemono Legacy 0.0.2</button>
+            <h2>Games</h2>
+            <p>Explore my games below:</p>
+            <button onclick="redirectToGame('bakemono_legacy', '0.0.2')">Bakemono Legacy 0.0.2</button>
+            <button onclick="redirectToGame('office_rebellion_rise_of_the_union', '0.0.1')">Bakemono Legacy 0.0.2</button>
         </section>
     </div>
 
@@ -34,15 +35,17 @@
     </footer>
 
     <script>
+        document.getElementById('viewCV').addEventListener('click', redirectToResume);
+        document.getElementById('viewGame').addEventListener('click', redirectToGame);
+
         function redirectToResume() {
             // Redirect to the resume page (resume.php)
             window.location.href = 'resume.php';
         }
 
-        function redirectToGame() {
-            window.location.href='/games/bakemono_legacy/0.0.2/index.html';
+        function redirectToGame(gameName, version) {
+            window.location.href = `/games/${gameName}/${version}/index.html`;
         }
     </script>
 </body>
-
 </html>
