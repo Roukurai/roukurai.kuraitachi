@@ -1,0 +1,17 @@
+services:
+  kuraiorg:
+    build: .
+    ports:
+      - "80:80"
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: kuraiorg
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: kuraiorg
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
+  - roukurai_kuraitachi:/
