@@ -19,7 +19,7 @@
         <section class="secondary-container" id="secondary-container">
             <div class="secondary-content" id="secondary-content">
                 <div class="profile-picture" id="profile-picture">
-                    <img src="fullpp.jpeg" alt="Roukurai's Profile Picture">
+                    <img src="/assets/images/fullpp.jpeg" alt="Roukurai's Profile Picture">
                 </div>
 
                 <div class="contact-info" id="contact-info">

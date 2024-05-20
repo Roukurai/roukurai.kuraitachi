@@ -1,29 +1,21 @@
-# Base image
-FROM apache:latest
+# Use the official lightweight Alpine image
+FROM alpine:latest
 
-# Install PostgreSQL
-RUN apt-get update && apt-get install -y postgresql
+# Enable the repositories
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/v$(cat /etc/alpine-release | cut -d'.' -f1,2)/main" > /etc/apk/repositories && \
+    echo "http://dl-cdn.alpinelinux.org/alpine/v$(cat /etc/alpine-release | cut -d'.' -f1,2)/community" >> /etc/apk/repositories && \
+    apk update
 
-# Create database user and database
-RUN echo "CREATE USER kuraiorg WITH PASSWORD 'ADMIN123*@';" | psql -U postgres -d postgres
-RUN echo "CREATE DATABASE kuraitachi;" | psql -U postgres -d postgres
+# Update package repository and install apache2, php, and necessary extensions
+RUN apk add apache2 php php-apache2 php-pdo php-pdo_pgsql && \
+    rm -rf /var/cache/apk/* && \
+    apk update
 
-# Copy project files
-COPY . /var/www/html/
-
-# Configure apache to serve index.html
-<VirtualHost *:80>
-    ServerName localhost
-    DocumentRoot /var/www/html
-
-    <Directory /var/www/html>
-        AllowOverride All
-        Require all granted
-    </Directory>
-</VirtualHost>
-
-# Expose port 80
+# Expose port 80 for HTTP traffic
 EXPOSE 80
 
-# Start apache and PostgreSQL
-CMD ["apachectl", "-D", "FOREGROUND", "&", "postgres", "-D", "/var/lib/postgresql/data"]
+# Add a simple PHP info file for testing
+RUN echo "<?php phpinfo(); ?>" > /var/www/localhost/htdocs/index.php
+
+# Start Apache in the foreground to keep the container running
+CMD ["httpd", "-D", "FOREGROUND"]

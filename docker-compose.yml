@@ -1,8 +1,15 @@
 services:
   kuraiorg:
-    build: .
+    build: 
+      context: .
+      dockerfile: dockerfile
     ports:
-      - "80:80"
+      - "8015:80"
+    volumes:
+      - .:/var/www/localhost/htdocs
+    depends_on:
+      - postgres
+
   postgres:
     image: postgres:latest
     environment:
@@ -11,7 +18,8 @@ services:
       POSTGRES_DB: kuraiorg
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
 volumes:
   postgres_data:
-  - roukurai_kuraitachi:/
