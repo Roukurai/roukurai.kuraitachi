@@ -2,43 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <title>Learning Resources</title>
-<style>
-    .section {
-        margin: 0;
-        padding: 0;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        overflow: hidden;
-    }
-
-    .section h2 {
-        color: #333;
-        margin-bottom: 10px;
-        padding: 10px;
-        background-color: #f5f5f5;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .section ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .section li {
-        margin-bottom: 10px;
-        padding: 5px;
-    }
-
-    .section a {
-        text-decoration: none;
-        color: #007BFF;
-    }
-</style>
 
 </head>
 
