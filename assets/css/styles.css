@@ -1,0 +1,97 @@
+:root {
+  --image-header: url(../images/banner.jpg);
+  --red-virginia: #920101;
+  --black-virginia:#48404d;
+  --greyTenue1-virginia: #5b5b5b;
+  --greyTenue2-virginia: #999999;
+  --blue-virginia: #2064a2;
+  /*Kurai Font*/
+  --ComfortaKurai: "Comfortaa",sans-serif;
+  --color-white: #ebf2fa;
+  --color-decoration: #fde385;
+  /*Buttons*/
+  --color-button-cyan: #50d8d7;
+  --color-button-orange-red: #F95738;
+  --color-button-orange: #ee964b;
+  --color-button-blue: #0d3b66;
+  --color-button-yellow: #f4d35e;
+
+
+  /* Default Theme */
+  --header-background: #119822; /* Forest Green */
+  --header-font-color: #e6d9f0; /* Light Orange */
+
+  --footer-background: #001f1c; /* Even Darker Greenish Gray */
+  --footer-font-color: #e6d9f0; /* Light Grayish Purple */
+
+  --primary-background: #2a52be; 
+  --primary-font-color: #e6d9f0; /* Lime Green */
+
+  --secondary-background: #008080; 
+  --secondary-font-color: #e6d9f0; /* Forest Green */
+
+  /* Fonts */
+  --heading-font: "Lora", sans-serif; /* Bold for headings */
+  --body-font: "Lato", sans-serif; /* Regular for body text */
+  --cta-font: "Montserrat", sans-serif; /* Bold for call to actions */
+
+  /* Additional Tips */
+  --shadow-color: #aaaaaa; /* Subtle shadow color */
+  --gradient-start: #b2ffb8; /* Light orange for gradient start */
+  --gradient-end: #31cb00; /* Lime green for gradient end */
+  --padding-base: 10px; /* Base padding for elements */
+  --margin-base: 15px; /* Base margin for elements */
+
+  /* DEBUGGIN VARIABLES */
+  --test-color-alpha: #ff0077;
+  --test-color-beta: #f2e5cc;
+  --test-color-omega: #002fff;
+}
+
+body,.main-container,header,footer{
+  box-sizing: border-box;
+  padding: 0 0;
+  margin: 0;
+}
+
+body {
+  
+  font-family: var(--body-font);
+  color: var(--primary-font-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  cursor: crosshair;
+}
+
+header,footer{
+  font-family: var(--heading-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  width: 100vw;
+  z-index: 999;
+  height: 5%;
+  overflow: hidden;
+
+}
+
+header {
+  background-color: var(--header-background);
+  color: var(--header-font-color);
+  top: 0;
+}
+
+footer {
+  background-color: var(--footer-background);
+  color: var(--footer-font-color);
+  bottom: 0;
+}
+
+.main-container {
+  display: flex;
+  overflow: hidden;
+  height: 90vh;
+  background-color: var(--test-color-omega);
+}

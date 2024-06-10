@@ -5,19 +5,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
     <title>Roukurai - Landing Page</title>
 </head>
 
 <body>
     <header>
-        <h1>Roukurai</h1>
-        <p>Under construction</p>
+        <nav id="nav" class="nav">
+            <a href="index.html">Home</a>
+            <a href="pages/resources.php">Resources</a>
+            <a href="pages/resume.php">Portfolio</a>
+            <a href="pages/upload_form.php">Contact Us</a>
+        </nav>
     </header>
 
     <div class="main-container">
         <section class="landing-content">
-            <h2>Welcome to my Landing Page!</h2>
+            <h2>TESTING</h2>
             <p>This is a placeholder for future content. Check back soon for updates!</p>
             <button id="viewCV">View CV</button>
         </section>
@@ -40,7 +45,7 @@
 
         function redirectToResume() {
             // Redirect to the resume page (resume.php)
-            window.location.href = 'resume.php';
+            window.location.href = '/pages/resume.php';
         }
 
         function redirectToGame(gameName, version) {

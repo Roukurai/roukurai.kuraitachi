@@ -1,0 +1,25 @@
+services:
+  kuraiorg:
+    build: 
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8015:80"
+    volumes:
+      - .:/var/www/localhost/htdocs
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: kuraiorg
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: kuraiorg
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

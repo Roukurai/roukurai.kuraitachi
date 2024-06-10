@@ -1,0 +1,17 @@
+.env
+.venv/
+data/.config
+.git/
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+
+*.tmp
+*.swp
+.DS_Store
+
+.vscode
+.idea
+
+logs/
