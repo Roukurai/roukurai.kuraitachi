@@ -1,0 +1,75 @@
+
+.secondary-container, .primary-container {
+    box-sizing: border-box;
+    /* top: 5%;
+    bottom: 5%;*/
+    padding: 1%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .secondary-container {
+    flex: 0 0 15%;
+    background-color: var(--secondary-background);
+    font-size: 12px;
+    color: var(--secondary-font-color);
+    position: sticky;
+  }
+  
+  .primary-container {
+    background-color: var(--primary-background);
+    font-size: 14px;
+    color: var(--primary-font-color);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex: 1;
+    position: sticky;
+  }
+  
+  /* Catch All Selectors */
+  .primary-container * {
+    background-color: inherit;
+    padding: 2px 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    color: var(--primary-font-color);
+    font-size: 16px;
+  }
+  
+  .secondary-container * {
+    background-color: inherit;
+    padding: 2px 0;
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    color: var(--secondary-font-color);
+  }
+  
+  .profile-picture {
+    object-fit: cover;
+    height: 25%;
+    width: 25%;
+    margin: 0 auto;
+    border-radius: 45%;
+  }
+  
+  .primary-content {
+  overflow-y: scroll;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  
+  .primary-content{
+    padding: 0 0 1px 0;
+  }
+  
+  .secondary-content{
+    padding: 2% 2%;
+  }
+  
+  .landing-content{
+    background-color: inherit;
+  }
