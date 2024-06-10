@@ -6,13 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/resume.css">
     <link href="/assets/css/feather.css" rel="stylesheet">
     <title>Roukurai - Kurai Tachi</title>
 </head>
 
 <body>
     <header>
-        <h4>Roukurai - Under construction</h4>
+        <nav id="nav" class="nav">
+            <a href="../index.html">Home</a>
+            <a href="resources.php">Resources</a>
+            <a href="resume.php">Portfolio</a>
+            <a href="upload_form.php">Contact Us</a>
+        </nav>
     </header>
 
     <div class="main-container" id="main-container">
