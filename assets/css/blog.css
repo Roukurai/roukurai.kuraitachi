@@ -2,8 +2,8 @@
 
 
 
-.secondary-container,
-.primary-container {
+.profile-summary,
+.blog-container {
   box-sizing: border-box;
   padding: 1%;
   /* display: grid; */
@@ -11,7 +11,7 @@
   /* justify-content: center; */
 }
 
-.secondary-container {
+.profile-summary {
   flex: 0 0 15%;
   background-color: var(--secondary-background);
   font-size: 12px;
@@ -19,7 +19,7 @@
   position: sticky;
 }
 
-.primary-container {
+.blog-container {
   background-color: var(--primary-background);
   font-size: 14px;
   color: var(--primary-font-color);
@@ -29,7 +29,7 @@
   position: sticky;
 }
 
-.primary-container * {
+.blog-container * {
   background-color: inherit;
   padding: 2px 0;
   max-width: 100%;
@@ -38,7 +38,7 @@
   font-size: 16px;
 }
 
-.secondary-container * {
+.profile-summary * {
   background-color: inherit;
   padding: 2px 0;
   max-width: 100%;
@@ -65,27 +65,23 @@
   padding: 0;
 }
 
-.primary-content {
-  padding: 0 0 1px 0;
-}
-
-.secondary-content {
-  padding: 2% 2%;
-}
-
-.landing-content {
-  background-color: inherit;
-}
-.blog-title {
+.title-container {
   background-color: var(--greyTenue2-virginia);
 }
-.blog-content {
+.content-container {
   background-color: var(--secondary-background);
   padding: 0;
   margin: 0;
 }
+
+.comment-textarea{
+  width: 100%;
+  height: 120px;
+}
 .comment-container {
   background-color: var(--greyTenue1-virginia);
+  padding: 2%;
+
 }
 
 .social-item {
@@ -103,7 +99,7 @@
     max-width: 20px;
 }
 
-.blog-title-social {
+.social-container {
   position: relative;
   bottom: 0;
   display: flex;
@@ -112,27 +108,27 @@
   margin: 1px;
 }
 
-.blog-title-social * {
+.social-container * {
   font-size: small;
   height: 20px;
   width: 100%;
 }
 
-.blog-title-name {
+.title-name {
   background-color: var(--black-virginia);
 }
-.blog-title-textarea {
+.title-textarea {
   background-color: var(--greyTenue1-virginia);
   height: 100%;
 }
-.blog-title-description {
+.title-description {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
 
-.blog-title-details {
+.title-details {
   display: flex;
   flex-direction: column;
   gap: 1px;
@@ -140,10 +136,10 @@
   height: 100%;
   width: 100%;
 }
-.blog-title-details * {
+.title-details * {
   padding: 0;
 }
-.blog-title-image {
+.title-image {
     display: flex;
     align-content: center;
   /* background-color: var(--blue-virginia); */
@@ -152,7 +148,7 @@
   padding: 0;
 }
 
-.blog-title {
+.title-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

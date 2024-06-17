@@ -1,8 +1,6 @@
-
+/* 
 .secondary-container, .primary-container {
     box-sizing: border-box;
-    /* top: 5%;
-    bottom: 5%;*/
     padding: 1%; 
     display: flex;
     align-items: center;
@@ -27,7 +25,6 @@
     position: sticky;
   }
   
-  /* Catch All Selectors */
   .primary-container * {
     background-color: inherit;
     padding: 2px 0;
@@ -72,4 +69,4 @@
   
   .landing-content{
     background-color: inherit;
-  }
+  } */

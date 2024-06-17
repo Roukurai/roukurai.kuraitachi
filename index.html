@@ -1,56 +1,33 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/styles.css"/>
+    <link rel="stylesheet" href="/assets/css/feather.css"/>
     <title>Roukurai - Landing Page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav id="nav" class="nav">
-            <a href="index.html">Home</a>
-            <a href="pages/resources.php">Resources</a>
-            <a href="pages/resume.php">Portfolio</a>
-            <a href="pages/upload_form.php">Contact Us</a>
-        </nav>
+      <nav id="nav" class="nav">
+        <a href="/pages/index.php">Home</a>
+        <a href="/pages/resources.php">Resources</a>
+        <a href="/pages/resume.php">Portfolio</a>
+        <a href="/pages/upload_form.php">Contact Us</a>
+        <a href="/pages/feed.php">Blog Feed</a>
+        <!-- <a href="/blog/posts/post_2.html">Blog Feed</a> -->
+      </nav>
     </header>
 
     <div class="main-container">
-        <section class="landing-content">
-            <h2>TESTING</h2>
-            <p>This is a placeholder for future content. Check back soon for updates!</p>
-            <button id="viewCV">View CV</button>
-        </section>
-
-        <section>
-            <h2>Games</h2>
-            <p>Explore my games below:</p>
-            <button onclick="redirectToGame('bakemono_legacy', '0.0.2')">Bakemono Legacy 0.0.2</button>
-            <button onclick="redirectToGame('office_rebellion_rise_of_the_union', '0.0.1')">Office Rebellion: Rise of the Union</button>
-        </section>
+        <iframe src="/pages/index.php" frameborder="0"></iframe>
     </div>
 
     <footer>
-        <p>&copy; 2024 Kurai Tachi</p>
+      <p>&copy; 2024 Kurai Tachi</p>
     </footer>
 
-    <script>
-        document.getElementById('viewCV').addEventListener('click', redirectToResume);
-        document.getElementById('viewGame').addEventListener('click', redirectToGame);
-
-        function redirectToResume() {
-            // Redirect to the resume page (resume.php)
-            window.location.href = '/pages/resume.php';
-        }
-
-        function redirectToGame(gameName, version) {
-            window.location.href = `/games/${gameName}/${version}/index.html`;
-        }
-    </script>
-</body>
+    <script src="/assets/scripts/mainContainer.js"></script>
+  </body>
 </html>
